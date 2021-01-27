@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { appActions } from "./actions/actions";
 import { AppState } from "./types/general";
-import { AiFillLock, AiFillUnlock } from 'react-icons/ai';
+import { FaLock, FaLockOpen } from 'react-icons/fa';
 
 const App: React.FC = () => {
 
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         }}>OK</button>
       </div>
 
-      <div>{isOpen === true ? <AiFillUnlock size="100" /> : <AiFillLock size="100" />}</div>
+      <div>{isOpen === true ? <FaLockOpen size="100" /> : <FaLock size="100" />}</div>
     </div>
 
 
