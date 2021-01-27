@@ -17,11 +17,11 @@ const App: React.FC = () => {
   console.log("open: " + isOpen);
 
   const createPincode = (number: string) => {
-    setPincode(pincode + number)
+    if((pincode + number).length <= 4)
+      setPincode(pincode + number)
   }
 
   const handleDispatch = () => {
-    console.log("dispatchissa");
     dispatch(appActions.pincodeCheckTrigger({ pincode }))
   }
 
