@@ -14,15 +14,8 @@ const App: React.FC = () => {
     }
   );
 
-  console.log("open: " + isOpen);
-
   const createPincode = (number: string) => {
-    if((pincode + number).length <= 4)
-      setPincode(pincode + number)
-  }
-
-  const handleDispatch = () => {
-    dispatch(appActions.pincodeCheckTrigger({ pincode }))
+    setPincode(pincode + number)
   }
 
   return (
@@ -55,7 +48,7 @@ const App: React.FC = () => {
         }}>OK</button>
       </div>
 
-      <div>{isOpen === true ? <FaLockOpen size="100" /> : <FaLock size="100" />}</div>
+      <div>{isOpen ? <FaLockOpen size="100" /> : <FaLock size="100" />}</div>
     </div>
 
 
